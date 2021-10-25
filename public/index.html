@@ -20,15 +20,17 @@
   <form id="chat">
     <input type="text" name="username" id="username" placeholder="Digite seu usuário">
     <div class="messages"></div>
-    <input type="text" name="message" id="message" placeholder="Digite sua mensagem">
-    <button type="submit">Enviar</button>
+    <div class="btn">
+      <input type="text" name="message" id="message" placeholder="Digite sua mensagem"/>
+      <button type="submit">Enviar</button>
+    </div>
   </form>
 
   <script type="text/javascript">
     let socket = io('http://localhost:3000');
 
     const renderMessage = ({author, message}) => {
-      $('.messages').append(`<div class"message" style="background-color: white; margin-top: 5px"><strong>${author}</strong>: ${message}</div>`)
+      $('.messages').append(`<div class"message" style="background-color: white; margin-top: 5px; border-radius: 10px; padding: 5px 20px;"><strong>${author}</strong>: ${message}</div>`)
     };
 
     socket.on('previuosMessages', (message) => {

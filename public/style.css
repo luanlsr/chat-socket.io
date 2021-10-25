@@ -37,6 +37,7 @@ h1 {
 }
 
 input {
+  border-radius: 30px;
   width: 600px;
   border: 1px solid #ddd;
   height: 50px;
@@ -45,16 +46,18 @@ input {
 }
 
 button {
-  width: 600px;
+  width: 50px;
+  border-radius: 30px;
+  border: none;
   height: 50px;
-  font-size: 25px;
-  background: rgb(18, 87, 151);
+  background: #1EBEA5;
   text-align: center;
   line-height: 50px;
   font-weight: bold;
   color: #FFF;
-  margin-top: 10px;
+  cursor: pointer;
 }
+
 
 .messages {
   width: 600px;
